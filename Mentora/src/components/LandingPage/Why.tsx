@@ -5,7 +5,7 @@ export default function Why() {
       <motion.img
         src="/Group 2.svg"
         alt=""
-        className="absolute top-8 -right-20 px-3 py-1 rounded w-55 hidden lg:block"
+        className="absolute top-8 right-10 px-3 py-1 rounded w-55 hidden lg:block"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{
           opacity: 1,
