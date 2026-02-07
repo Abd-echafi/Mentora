@@ -6,7 +6,7 @@ const MotionButton = motion(Button);
 export default function Hero() {
   return (
     <div className="min-h-screen  bg-[#EAEFFA] scroll-mt-20" id="features">
-      <div className="grid grid-cols-1 xl:grid-cols-2 max-w-7xl mx-auto h-full items-center px-6">
+      <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-35 max-w-7xl mx-auto h-full items-center px-6">
         <div className="flex flex-col items-center">
           <motion.h1
             className="font-semibold md:text-6xl md:leading-[1.4] leading-[1.2] xl:text-left text-center text-5xl"
@@ -93,11 +93,11 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="hidden xl:flex xl:justify-center xl:items-center">
+        <div className="hidden xl:flex xl:justify-end xl:items-center relative ">
           <motion.img
             src="/tree.svg"
             alt=""
-            className="max-w-full h-auto"
+            className="max-w-full h-auto top-0 left-40 absolute"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{
               opacity: 1,
