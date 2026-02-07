@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 export default function Why() {
   return (
-    <div className="bg-[#3D4CFF] mt-20 px-5 relative pt-8 pb-5">
+    <div className="bg-[#3D4CFF] mt-20 relative pt-8 pb-5 overflow-hidden">
       <motion.img
         src="/Group 2.svg"
         alt=""
-        className="absolute top-8 right-4  px-3 py-1 rounded w-55 hidden xl:block"
+        className="absolute top-8 -right-20 px-3 py-1 rounded w-55 hidden lg:block"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{
           opacity: 1,
@@ -20,7 +20,7 @@ export default function Why() {
           x: { duration: 2, repeat: Infinity, ease: "easeInOut" },
         }}
       />
-      <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-5xl font-semibold text-center">
           Why <span className="text-background">Mentora</span>
         </h2>

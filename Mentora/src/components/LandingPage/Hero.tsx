@@ -86,11 +86,11 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="hidden ml-15 mb-45 w-130 xl:block">
+        <div className="hidden xl:flex xl:justify-center xl:items-center">
           <motion.img
             src="/tree.svg"
             alt=""
-            className="-mb-18 ml-30"
+            className="max-w-full h-auto"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{
               opacity: 1,
@@ -108,6 +108,7 @@ export default function Hero() {
           <motion.img
             src="/person_img.svg"
             alt=""
+            className="max-w-full h-auto"
             whileHover={{ scale: 1.05, y: -10, transition: { duration: 0.3 } }}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

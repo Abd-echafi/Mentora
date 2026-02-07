@@ -7,7 +7,7 @@ import Questions from "../components/LandingPage/Questions";
 import Footer from "@/components/LandingPage/Footer";
 export default function LandingPageLayout() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 overflow-hidden w-full">
       <nav className="fixed top-0 left-0 w-full z-50 bg-background  border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Navbar />
