@@ -14,6 +14,19 @@ import { Link } from "react-router-dom";
 const MotionButton = motion(Button);
 export default function Navbar() {
   const [active, setActive] = useState("Features");
+  const [open, setOpen] = useState(false);
+
+  const handleMenuItemClick = (item: string, href: string) => {
+    setActive(item);
+    setOpen(false);
+    // Scroll to the section
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 0);
+  };
   return (
     <div className="flex justify-between bg-white py-0.5 px-13 items-center">
       <div>
@@ -150,18 +163,18 @@ export default function Navbar() {
           Sign up
         </MotionButton>
       </div>
-      <DropdownMenu>
+      <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
           <Button size="icon" variant="ghost" className="md:hidden">
             <Menu className="h-6 w-6" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56 mt-2">
+        <DropdownMenuContent className="w-screen mt-2">
           <DropdownMenuGroup>
             <DropdownMenuLabel>Navigation Menu</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => setActive("Features")}
-              className={`relative pl-6 ${
+              onClick={() => handleMenuItemClick("Features", "#features")}
+              className={`relative pl-6 cursor-pointer ${
                 active === "Features"
                   ? "text-primary font-medium"
                   : "text-muted-foreground"
@@ -173,8 +186,8 @@ export default function Navbar() {
               Features
             </DropdownMenuItem>
             <DropdownMenuItem
-              onClick={() => setActive("Courses")}
-              className={`relative pl-6 ${
+              onClick={() => handleMenuItemClick("Courses", "#courses")}
+              className={`relative pl-6 cursor-pointer ${
                 active === "Courses"
                   ? "text-primary font-medium"
                   : "text-muted-foreground"
@@ -186,8 +199,8 @@ export default function Navbar() {
               Courses
             </DropdownMenuItem>
             <DropdownMenuItem
-              onClick={() => setActive("Reviews")}
-              className={`relative pl-6 ${
+              onClick={() => handleMenuItemClick("Reviews", "#reviews")}
+              className={`relative pl-6 cursor-pointer ${
                 active === "Reviews"
                   ? "text-primary font-medium"
                   : "text-muted-foreground"
@@ -199,8 +212,8 @@ export default function Navbar() {
               Reviews
             </DropdownMenuItem>
             <DropdownMenuItem
-              onClick={() => setActive("About")}
-              className={`relative pl-6 ${
+              onClick={() => handleMenuItemClick("About", "#about")}
+              className={`relative pl-6 cursor-pointer ${
                 active === "About"
                   ? "text-primary font-medium"
                   : "text-muted-foreground"
@@ -212,8 +225,8 @@ export default function Navbar() {
               About
             </DropdownMenuItem>
             <DropdownMenuItem
-              onClick={() => setActive("Contact")}
-              className={`relative pl-6 ${
+              onClick={() => handleMenuItemClick("Contact", "#contact")}
+              className={`relative pl-6 cursor-pointer ${
                 active === "Contact"
                   ? "text-primary font-medium"
                   : "text-muted-foreground"

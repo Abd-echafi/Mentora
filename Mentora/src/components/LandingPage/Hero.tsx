@@ -5,7 +5,7 @@ const MotionButton = motion(Button);
 
 export default function Hero() {
   return (
-    <div className="h-screen bg-[#EAEFFA] scroll-mt-20" id="features">
+    <div className="min-h-screen  bg-[#EAEFFA] scroll-mt-20" id="features">
       <div className="grid grid-cols-1 xl:grid-cols-2 max-w-7xl mx-auto h-full items-center px-6">
         <div className="flex flex-col items-center">
           <motion.h1
@@ -34,9 +34,9 @@ export default function Hero() {
             results.
           </p>
           <div className=" mt-10 ">
-            <div className="flex flex-col justify-around sm:justify-start md:flex-row gap-4 md:gap-6 lg:gap-8">
+            <div className="flex flex-col justify-around sm:justify-start md:flex-row gap-4 md:gap-6 lg:gap-8 items-center">
               <MotionButton
-                className="py-7 px-8 md:py-8 md:px-14 bg-[#3D4CFF] text-background hover:bg-[#3D4CFF]/90 text-xl"
+                className="py-7 sm:px-8 md:py-8 md:px-14 w-70 bg-[#3D4CFF] text-background hover:bg-[#3D4CFF]/90 md:text-xl text-md"
                 transition={{
                   duration: 2,
                   repeat: Infinity,
@@ -51,7 +51,7 @@ export default function Hero() {
                 Start Learning
               </MotionButton>
               <MotionButton
-                className="py-7 px-8 md:py-8 md:px-14  bg-[#EAEFFA] text-foreground border border-[#3D4CFF] hover:bg-gray-300 text-xl"
+                className="py-7 px-8 md:py-8 md:px-14 w-70 bg-[#EAEFFA] text-foreground border border-[#3D4CFF] hover:bg-gray-300 text-xl"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95, y: 2 }}
                 transition={{ type: "spring", stiffness: 300 }}
@@ -59,27 +59,34 @@ export default function Hero() {
                 Become a Mentor
               </MotionButton>
             </div>
-            <div className="flex md:justify-start gap-25 mt-18 justify-center ">
-              <div>
-                <p className="font-semibold text-6xl">
+            <div
+              className="
+                grid grid-cols-1 gap-8
+                justify-center
+                md:flex md:justify-start md:gap-20
+                mt-8 md:mt-18
+                mb-10 sm:mb-0
+              "
+            >
+              <div className="text-center">
+                <p className="font-semibold md:text-6xl text-4xl">
                   <Counter to={10} suffix="M" />
                 </p>
-                <p className="mt-8 text-center text-black/40">HAPPY CUSTOMER</p>
+                <p className="mt-4 md:mt-8 text-black/40">HAPPY CUSTOMER</p>
               </div>
-              <div>
-                <p className="font-semibold text-6xl">
+
+              <div className="text-center">
+                <p className="font-semibold md:text-6xl text-4xl">
                   <Counter to={20} suffix="K" />
                 </p>
-                <p className="mt-8 text-center text-black/40">
-                  {" "}
-                  POPULAR COURSE
-                </p>
+                <p className="mt-4 md:mt-8 text-black/40">POPULAR COURSE</p>
               </div>
-              <div>
-                <p className="font-semibold text-6xl">
+
+              <div className="text-center">
+                <p className="font-semibold md:text-6xl text-4xl">
                   <Counter to={10} suffix="+" />
                 </p>
-                <p className="mt-8 text-center text-black/40">
+                <p className="mt-4 md:mt-8 text-black/40">
                   YEARS <br /> EXPERIENCES
                 </p>
               </div>

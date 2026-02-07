@@ -54,7 +54,7 @@ export default function Questions() {
               Join thousands of students improving their grades with personal
               mentors <br /> and structured support.
             </p>
-            <div className=" space-x-3 ">
+            <div className="flex flex-col gap-3 sm:flex-row sm:space-x-3 pr-8 sm:pr-0">
               <MotionButton
                 className="py-6 px-10 bg-white text-foreground border border-[#3D4CFF] hover:bg-gray-300"
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -76,8 +76,8 @@ export default function Questions() {
           <img
             src="/Group 21.svg"
             alt=""
-            className="lg:w-80 lg:rotate-0 lg:mr-0 lg:mt-0
-            -rotate-90 -mr-30 -mt-60 w-60"
+            className="hidden sm:block lg:w-80 lg:rotate-0 lg:mr-0 lg:mt-0
+            -rotate-90 -mr-30 -mt-110 w-50 sm:-mt-50 sm:w-60"
           />
         </div>
       </div>
