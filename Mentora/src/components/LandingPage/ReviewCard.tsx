@@ -1,10 +1,9 @@
 import type { Review } from "@/types/review";
-import { clsx } from "clsx";
 
 type ReviewCardProps = {
   review: Review;
 };
-const colors = ["#000000", "#FF0000", "#3D4CFF", "#F6FF00"];
+
 export default function ReviewCard({ review }: ReviewCardProps) {
   return (
     <>

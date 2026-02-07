@@ -1,10 +1,10 @@
-import Courses from "@/components/LnadingPage/Courses";
-import Hero from "@/components/LnadingPage/Hero";
-import Navbar from "@/components/LnadingPage/Navbar";
-import Reviews from "@/components/LnadingPage/Reviews";
-import Why from "@/components/LnadingPage/Why";
-import Questions from "./../components/LnadingPage/Questions";
-import Footer from "@/components/LnadingPage/Footer";
+import Courses from "@/components/LandingPage/Courses";
+import Hero from "@/components/LandingPage/Hero";
+import Navbar from "@/components/LandingPage/Navbar";
+import Reviews from "@/components/LandingPage/Reviews";
+import Why from "@/components/LandingPage/Why";
+import Questions from "../components/LandingPage/Questions";
+import Footer from "@/components/LandingPage/Footer";
 export default function LandingPageLayout() {
   return (
     <div className="bg-gray-50">
